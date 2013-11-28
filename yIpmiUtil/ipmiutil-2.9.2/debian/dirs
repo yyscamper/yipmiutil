@@ -1,0 +1,5 @@
+usr/bin
+usr/sbin
+usr/share/ipmiutil
+etc/init.d
+etc/cron.daily

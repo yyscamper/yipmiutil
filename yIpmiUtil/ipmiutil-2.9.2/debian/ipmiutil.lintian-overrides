@@ -1,0 +1,14 @@
+# Checking if ipmiutil sel errors is -- by definition -- an error.
+# "set -e" causes the entire postinst script to exit when this
+# check returns an error, regardless of how it's handled.
+# (resolved now)
+# ipmiutil: maintainer-script-ignores-errors postinst
+
+# The only GPL code in ipmiutil is md2.h, which is excluded
+# by default, so ignore unsafe link with openssl warning
+ipmiutil: possible-gpl-code-linked-with-openssl
+
+# The idiscover, ievents, ipmi_port binaries are small, simple
+# utilities not compiled with all compile options.
+# ipmiutil: hardening-no-fortify-functions
+

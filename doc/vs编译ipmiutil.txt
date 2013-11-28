@@ -1,0 +1,74 @@
+//本文档由美信云网管提供
+
+1、到开源网站下载ipmiutil源码，如ipmiutil-2.9.1.tar.gz
+2、用vs2008新建工程MyIpmiUtil（win32控制台应用程序），将ipmiutil-2.9.1.tar.gz解压得ipmiutil-2.9.1，将其拷贝到MyIpmiUtil下
+3、右键MyIpmiUtil添加新建筛选器，起名util
+3、右键点筛选器util,添加现有项。
+   找到ipmiutil-2.9.1目录下的util目录，先将目录util下的所有.h文件和.c文件及.cpp文件加入MyIpmiUtil工程
+4、右键MyIpmiUtil工程->属性，在常规里将字符集设置为【使用多字节字符集】
+5、右键，生成。报很多错。右键-> 属性 -> 配置属性（下同） -> C/C++ -> 高级 -> 编译为 设置为：编译为C代码
+6、生成，很多警告和错误。右键-> 属性 -> C/C++ -> 预编译头 -> 创建/使用预编译头 设置为：不是用预编译头
+7、生成，很多错误。
+   (1)有几个.cpp文件（AnsiTerm.cpp，ipmims.cpp，mem_if_cpp.cpp，MyIpmiUtil.cpp，stdafx.cpp）凡是cpp文件都设置回编译为C++文件
+      用按Ctrl键选中这些cpp文件（注：别把工程给选中了），右键-> 属性 -> C/C++ -> 高级 -> 编译为 设置为：编译为C++代码
+   (2)选中mem_if.c文件，右键->从项目中排除。有mem_if_cpp.cpp文件就不用它了。
+8、生成，错误找不到getopt.h和unistd.h头文件。
+   (1)下一个Windows版的getopt.h和getopt.c文件放到工程目录MyIpmiUtil目录下。右键工程，添加现有项，将getopt.c添加到工程，工程->
+      右键->属性-> C/C++ -> 属性 ->附加包含目录,填上当前目录(./)
+   (2)找到ipmi_port.c文件，从项目中排除。它已经说了：Only needed for Linux.
+9、生成，连接错误。
+   将MyIpmiUtil.cpp里的主函数注释，好多地方已有主函数，右键-> 属性 -> C/C++ -> 预处理器 -> 预处理器定义 -> 加入宏METACOMMAND
+   关闭其他主函数，此处很关键
+10、生成，连接错误。
+   (1)ifruset.c和ifru.c有函数冲突，将ifruset.c从项目中排除，它已说了：ifruset  (copy of ifru.c with extended FRU writing)
+      将其删除无关大局
+   (2)将ipmilan2.cpp和ipmilan2.h从项目中排除，ipmilanplus.cpp中已有相关函数
+   (3)将ipmi_sample_evt.c里的main函数改个名，如：rename_main
+   (4)将ipmi_sample.c里的main函数也改个名，如：re_name_main
+10、生成，连接错误。此时的连接错误主要是缺少库造成的，我们需要用到以下库WbemUuid.Lib，ssleay32.lib，libeay32.lib，IPHlpApi.lib......
+   (1)下载 IPHlpApi.lib和WbemUuid.lib(有可能你的开发环境不缺这两库)，下载编译好的windows oenpssl如openssl-0.9.8e_WIN32，用到其中的bin下的dll文件
+      lib下的lib文件，可能用到include下的头文件
+   (2)在工程目录MyIpmiUtil下新建lib目录，将WbemUuid.Lib，ssleay32.lib，libeay32.lib，IPHlpApi.lib放到lib目录下
+   (3)工程->右键属性->连接器->输入-> 附加依赖项，加入库ssleay32.lib IPHlpApi.lib WbemUuid.lib WS2_32.lib comsupp.lib comsuppw.lib
+   (4)工程->右键属性->连接器->常规 -> 附加库目录输入./lib
+11、生成，两个连接错误。把两个一模一样的函数注释掉一个
+   (1)将ipmi_sample_evt.c里的show_event函数注释，添加一个声明，如：
+      //声明
+      void show_event(uchar *evt,char *obuf, int sz);
+      //把实现注释
+      //void show_event(uchar *evt,char *obuf, int sz)
+
+      //{
+
+      //   int i;
+
+      //   char sysbuf[250];
+
+      //   /* obuf should be 132 chars or more */
+
+      //
+
+      //   msgout("event data: ");
+
+      //   for (i=0; i<16; i++) msgout("%02x ",evt[i]);
+
+      //   msgout("\n");
+
+      //
+
+      //   decode_sel_entry(evt,obuf,sz);
+
+      //   msgout(obuf); /*writes to outfile*/
+
+      //   /* write the message to syslog also. */
+
+      //   snprintf(sysbuf,sizeof(sysbuf),"%s: %s",progname,obuf);
+
+      //   write_syslog(sysbuf);
+
+      //}
+    (2)将ievents.c里的utc2local函数注释
+12、生成，您是否已大功告成？
+13、运行。在命令行下给参数，如：MyIpmiUtil.exe sensor -s -N 192.168.1.207 -U root -P your_pswd
+注：ipmiutil-2.9.1\lib\lanplus下的文件并未加入工程，实际上不加入并不影响功能，如有人加入后编译通过，希望分享方法。
+如果想要编译ipmiutil-2.9.1\lib\lanplus则需将openssl下的include下的文件拷到工程MyIpmiUtil下的ipmiutil-2.9.1\lib\lanplus\inc\openssl目录下

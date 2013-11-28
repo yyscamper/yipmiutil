@@ -1,0 +1,254 @@
+ipmiutil (2.9.2-1) unstable; urgency=low
+
+  * Initial official Debian release (Closes: #650323)
+  * Updated debian/copyright to DEP-5 format, and included more detail
+  * See also ChangeLog file in source
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 14 Jun 2013 12:08:08 -0400
+
+ipmiutil (2.9.1+nmu1) UNRELEASED; urgency=low
+
+  * updated rules to use dh syntax and debhelper 9 (up from 4); many lintian
+    cleanups as a result
+  * added dh-autoreconf as a build dependency; can now stop using beforeconf.sh
+  * updated control file with additional information and standards-version
+  * --enable-gpl is now used in rules; enables MD2 hash for IPMI LAN
+  * daily cronjob is no longer installed via postinst script
+  * prerm script added, properly deletes /var/lib/ipmiutil on purge
+
+ -- Alex Waite <Alexqw85@gmail.com>  Fri, 14 Jun 2013 17:21:15 +0200
+
+ipmiutil (2.9.1) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 12 Apr 2013 07:21:54 -0400
+
+ipmiutil (2.9.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 04 Apr 2013 21:14:03 -0400
+
+ipmiutil (2.9.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 04 Apr 2013 21:12:25 -0400
+
+ipmiutil (2.9.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 04 Apr 2013 21:09:44 -0400
+
+ipmiutil (2.9.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 04 Apr 2013 21:06:46 -0400
+
+ipmiutil (2.9.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 04 Apr 2013 21:00:16 -0400
+
+ipmiutil (2.9.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 04 Apr 2013 20:58:37 -0400
+
+ipmiutil (2.8.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Sun, 31 Mar 2013 18:51:35 -0400
+
+ipmiutil (2.8.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Sun, 31 Mar 2013 18:51:07 -0400
+
+ipmiutil (2.8.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Sun, 31 Mar 2013 18:50:35 -0400
+
+ipmiutil (2.8.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Sun, 31 Mar 2013 18:49:23 -0400
+
+ipmiutil (2.8.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Sun, 31 Mar 2013 18:46:31 -0400
+
+ipmiutil (2.8.8) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 17 Jan 2013 06:06:40 -0500
+
+ipmiutil (2.8.7) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Tue, 11 Dec 2012 16:17:16 -0500
+
+ipmiutil (2.8.6) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 30 Aug 2012 11:57:52 -0400
+
+ipmiutil (2.8.5) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Wed, 13 Jun 2012 12:16:30 -0400
+
+ipmiutil (2.8.5) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Wed, 13 Jun 2012 12:15:57 -0400
+
+ipmiutil (2.8.5) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Wed, 13 Jun 2012 11:39:40 -0400
+
+ipmiutil (2.8.4) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 03 May 2012 11:03:55 -0400
+
+ipmiutil (2.8.4) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Wed, 02 May 2012 15:53:24 -0400
+
+ipmiutil (2.8.3) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 22 Mar 2012 16:36:45 -0400
+
+ipmiutil (2.8.2) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Mon, 13 Feb 2012 10:12:08 -0500
+
+ipmiutil (2.8.1) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 13 Jan 2012 10:27:46 -0500
+
+ipmiutil (2.8.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Wed, 07 Dec 2011 16:50:02 -0500
+
+ipmiutil (2.8.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Wed, 07 Dec 2011 16:49:11 -0500
+
+ipmiutil (2.8.0b) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 02 Dec 2011 18:37:57 -0500
+
+ipmiutil (2.8.0) UNRELEASED; urgency=low
+
+  * New upstream version, added prerm script
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 28 Oct 2011 16:44:02 -0400
+
+ipmiutil (2.7.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 28 Oct 2011 16:43:35 -0400
+
+ipmiutil (2.8.0) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Wed, 26 Oct 2011 11:01:02 -0400
+
+ipmiutil (2.7.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Tue, 20 Sep 2011 08:17:01 -0400
+
+ipmiutil (2.7.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Tue, 20 Sep 2011 08:14:05 -0400
+
+ipmiutil (2.7.9) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Thu, 15 Sep 2011 17:13:31 -0400
+
+ipmiutil (2.7.8) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Tue, 19 Jul 2011 12:57:11 -0400
+
+ipmiutil (2.7.7) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Mon, 16 May 2011 16:49:12 -0400
+
+ipmiutil (2.7.6) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 15 Apr 2011 12:47:17 -0400
+
+ipmiutil (2.7.5) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 25 Feb 2011 12:43:45 -0500
+
+ipmiutil (2.7.4) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Tue, 11 Jan 2011 13:52:43 -0500
+
+ipmiutil (2.7.3) UNRELEASED; urgency=low
+
+  * New upstream version.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 17 Dec 2010 14:30:28 -0500
+
+ipmiutil (2.7.2) UNRELEASED; urgency=low
+
+  * New upstream version.
+  * Patch to allow Debian package builds from svn.
+
+ -- Andy Cress <arcress@users.sourceforge.net>  Fri, 29 Oct 2010 16:44:31 -0500

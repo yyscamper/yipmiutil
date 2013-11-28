@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{1cd499cc-1004-4222-bfd1-db61ab326f00}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\AnsiTerm.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\idcmi.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\iekanalyzer.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ievents.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ifirewall.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ifru.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ifwum.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ihpm.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\imb_api.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ipicmg.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ipmicmd.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ipmidir.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ipmilan.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ipmilanplus.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\ipmiutil.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\isensor.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\itsol.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\md2.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\oem_dell.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\oem_fujitsu.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\oem_intel.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\oem_kontron.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\oem_sun.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\oem_supermicro.h">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ipmiutil-2.9.2\util\getopt.h">
+      <Filter>util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="yIpmiUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\AnsiTerm.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ialarms.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\icmd.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\iconfig.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\idcmi.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\idiscover.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\iekanalyzer.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ievents.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ifirewall.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ifru.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ifru_picmg.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ifwum.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\igetevent.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ihealth.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ihpm.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ilan.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\imbapi.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipicmg.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmi_sample.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmi_sample_evt.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmibmc.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmicmd.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmidir.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmilan.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmilanplus.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmild.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmilipmi.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmims.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmimv.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ipmiutil.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\ireset.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\isel.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\iseltime.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\isensor.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\iserial.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\isol.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\isolwin.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\itsol.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\iwdt.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\md2.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\md5.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\mem_if_cpp.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_dell.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_fujitsu.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_hp.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_intel.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_kontron.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_newisys.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_quanta.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_sun.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\oem_supermicro.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\subs.c">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipmiutil-2.9.2\util\getopt.c">
+      <Filter>util</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

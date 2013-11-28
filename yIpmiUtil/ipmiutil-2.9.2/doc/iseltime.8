@@ -1,0 +1,79 @@
+.TH ISELTIME 8 "Version 1.0: 01 Apr 2013"
+.SH NAME
+iseltime \- synchronize BMC SEL time with OS system time
+.SH SYNOPSIS
+.B "seltime [-sx -NUPRETVF]"
+
+.SH DESCRIPTION
+.I seltime
+is a program that uses IPMI commands to 
+set the BMC SEL time from the OS system time.
+The OS system time should be in sync with the BIOS Real-Time-Clock.
+The OS system time may also be kept from drifting via an NTP server.
+Normally the BIOS will set the BMC time from the RTC during boot, but
+running this command may be necessary periodically if the system 
+does not reboot for many weeks, for instance.
+Note that this command should not be run too frequently to avoid
+BMC timing issues.  Once per day should be sufficient.
+
+Run with no options, this command reads the BMC SEL time without
+setting anything.
+
+This utility can use either the /dev/ipmi0 openipmi driver, 
+the /dev/imb Intel driver, the /dev/ipmikcs valinux driver,
+a driverless interface, or IPMI LAN.
+
+.SH OPTIONS
+.IP "-s"
+Sets the SEL time (no more than once a day).
+.IP "-x"
+Causes eXtra debug messages to be displayed.
+
+.IP "-N nodename"
+Nodename of the remote target system.  If a nodename is specified,
+IPMI LAN interface is used.  Otherwise the local system management
+interface is used.
+.IP "-P/-R password"
+Remote password for the nodename given.  The default is a null password.
+.IP "-U username"
+Remote username for the nodename given.  The default is a null username.
+.IP "-E"
+Use the remote password from Environment variable IPMI_PASSWORD.
+.IP "-F drv_t"
+Force the driver type to one of the followng:
+imb, va, open, gnu, landesk, lan, lan2, lan2i, kcs, smb.
+Note that lan2i means lan2 with intelplus.
+The default is to detect any available driver type and use it.
+.IP "-J"
+Use the specified LanPlus cipher suite (0 thru 14): 0=none/none/none,
+1=sha1/none/none, 2=sha1/sha1/none, 3=sha1/sha1/cbc128, 4=sha1/sha1/xrc4_128,
+5=sha1/sha1/xrc4_40, 6=md5/none/none, ... 14=md5/md5/xrc4_40.
+.IP "-T"
+Use a specified IPMI LAN Authentication Type: 0=None, 1=MD2, 2=MD5, 4=Straight Password, 5=OEM.
+.IP "-V"
+Use a specified IPMI LAN privilege level. 1=Callback level, 2=User level, 3=Operator level, 4=Administrator level (default), 5=OEM level.
+.IP "-Y"
+Yes, do prompt the user for the IPMI LAN remote password.
+Alternatives for the password are -E or -P.
+
+
+.SH "SEE ALSO"
+ipmiutil(8) isel(8) ievents(8) icmd(8) 
+
+.SH WARNINGS
+See http://ipmiutil.sourceforge.net/ for the latest version of ipmiutil and any bug fix list.
+
+.SH COPYRIGHT
+Copyright (C) 2013  Kontron America, Inc.
+.PP
+See the file COPYING in the distribution for more details
+regarding redistribution.
+.PP
+This utility is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY.
+
+.SH AUTHOR
+.PP
+Andy Cress <arcress at users.sourceforge.net>
+.br
+
